@@ -1,0 +1,222 @@
+{
+  "successChangePassword": [
+    {
+      "AuthenticationResult": "AuthenticationSuccess",
+      "EmployeeAttribute": "Normal",
+      "GrantYear": 2025,
+      "CompanyId": "sys-coms"
+    }
+  ],
+  "failChangePassword": [
+    {
+      "AuthenticationResult": "AuthenticationFail",
+      "EmployeeAttribute": "Normal",
+      "GrantYear": 2025,
+      "CompanyId": "sys-coms"
+    }
+  ],
+  "paidHoliday_2025": [
+    {
+      "paidHolidayData": [
+        {
+          "num": 1,
+          "date": "2025/4/1",
+          "digestedFlag": false
+        },
+        {
+          "num": 2,
+          "date": "2025/4/4",
+          "digestedFlag": true
+        },
+        {
+          "num": 3,
+          "date": "2025/4/30",
+          "digestedFlag": false
+        },
+        {
+          "num": 4,
+          "date": "2025/5/7",
+          "digestedFlag": false
+        },
+        {
+          "num": 5,
+          "date": "2025/5/6",
+          "digestedFlag": false
+        }
+      ],
+      "currentGrantYear": 2025,
+      "grantYears": ["2025/4/1", "2026/4/1", "2027/4/1"],
+      "updateUserName": "西小野隆徳"
+    }
+  ],
+  "paidHoliday_2026": [
+    {
+      "paidHolidayData": [
+        {
+          "num": 1,
+          "date": "2026/4/1",
+          "digestedFlag": false
+        },
+        {
+          "num": 2,
+          "date": "2026/4/4",
+          "digestedFlag": true
+        },
+        {
+          "num": 3,
+          "date": "2026/4/30",
+          "digestedFlag": false
+        },
+        {
+          "num": 4,
+          "date": "2026/5/7",
+          "digestedFlag": false
+        },
+        {
+          "num": 5,
+          "date": "2026/5/6",
+          "digestedFlag": false
+        }
+      ],
+      "currentGrantYear": 2026,
+      "grantYears": ["2025/4/1", "2026/4/1", "2027/4/1"],
+      "updateUserName": "西小野隆徳"
+    }
+  ],
+  "paidHoliday_2027": [
+    {
+      "paidHolidayData": [
+        {
+          "num": 1,
+          "date": "",
+          "digestedFlag": false
+        },
+        {
+          "num": 2,
+          "date": "",
+          "digestedFlag": false
+        },
+        {
+          "num": 3,
+          "date": "",
+          "digestedFlag": false
+        },
+        {
+          "num": 4,
+          "date": "",
+          "digestedFlag": false
+        },
+        {
+          "num": 5,
+          "date": "",
+          "digestedFlag": false
+        }
+      ],
+      "currentGrantYear": 2027,
+      "grantYears": ["2025/4/1", "2026/4/1", "2027/4/1"],
+      "updateUserName": ""
+    }
+  ],
+  "memberlist": [
+    {
+      "UserID": "0001",
+      "GrantYear": 2024,
+      "Division": "所属部1",
+      "Part": "所属課1",
+      "Group": "グループ1",
+      "Name": "社員名1",
+      "DigestedDays": 30,
+      "AlertInfo": true
+    },
+    {
+      "UserID": "0002",
+      "GrantYear": 2024,
+      "Division": "所属部2",
+      "Part": "所属課2",
+      "Group": "グループ2",
+      "Name": "社員名2",
+      "DigestedDays": 30,
+      "AlertInfo": true
+    },
+    {
+      "UserID": "0003",
+      "GrantYear": 2024,
+      "Division": "所属部3",
+      "Part": "所属課3",
+      "Group": "グループ3",
+      "Name": "社員名3",
+      "DigestedDays": 30,
+      "AlertInfo": true
+    },
+    {
+      "UserID": "0004",
+      "GrantYear": 2024,
+      "Division": "所属部4",
+      "Part": "所属課4",
+      "Group": "グループ4",
+      "Name": "社員名4",
+      "DigestedDays": 30,
+      "AlertInfo": true
+    },
+    {
+      "UserID": "0005",
+      "GrantYear": 2024,
+      "Division": "所属部5",
+      "Part": "所属課5",
+      "Group": "グループ5",
+      "Name": "社員名5",
+      "DigestedDays": 30,
+      "AlertInfo": true
+    },
+    {
+      "UserID": "0006",
+      "GrantYear": 2024,
+      "Division": "所属部1",
+      "Part": "所属課1",
+      "Group": "グループ1",
+      "Name": "社員名1",
+      "DigestedDays": 30,
+      "AlertInfo": true
+    },
+    {
+      "UserID": "0007",
+      "GrantYear": 2024,
+      "Division": "所属部2",
+      "Part": "所属課2",
+      "Group": "グループ2",
+      "Name": "社員名2",
+      "DigestedDays": 30,
+      "AlertInfo": true
+    },
+    {
+      "UserID": "0008",
+      "GrantYear": 2024,
+      "Division": "所属部3",
+      "Part": "所属課3",
+      "Group": "グループ3",
+      "Name": "社員名3",
+      "DigestedDays": 30,
+      "AlertInfo": true
+    },
+    {
+      "UserID": "0009",
+      "GrantYear": 2024,
+      "Division": "所属部4",
+      "Part": "所属課4",
+      "Group": "グループ4",
+      "Name": "社員名4",
+      "DigestedDays": 30,
+      "AlertInfo": true
+    },
+    {
+      "UserID": "0010",
+      "GrantYear": 2024,
+      "Division": "所属部5",
+      "Part": "所属課5",
+      "Group": "グループ5",
+      "Name": "社員名5",
+      "DigestedDays": 30,
+      "AlertInfo": true
+    }
+  ]
+}

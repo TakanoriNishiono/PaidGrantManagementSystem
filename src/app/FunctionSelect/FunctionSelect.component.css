@@ -1,0 +1,9 @@
+.container {
+  width: 1520px;
+  height: 700px;
+}
+::ng-deep .mat-raised-button {
+  height: 50px;
+  width: 300px;
+  font-size: 1.2em;
+}

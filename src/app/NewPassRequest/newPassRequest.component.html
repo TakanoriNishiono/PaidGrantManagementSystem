@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="item item1">
+    <form th:action="@{/scheduledHoliday}" th:object="${ScheduledHolidayView}" method="post">
+      <p>
+        仮パスワードを発行します。<br />
+        ユーザーＩＤを入力し、
+        <span class="dummyButton">{{send}}</span>
+        すると、仮パスワードが発行されます。
+      </p>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>{{companyCode}}</mat-label>
+          <input placeholder={{companyCode}} matInput />
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>{{userID}}</mat-label>
+          <input placeholder={{userID}} matInput />
+        </mat-form-field>
+      </p>
+      <p>
+        <button mat-raised-button color="basic" color="primary" on-click="closeDialog()">
+          {{cancel}}
+        </button>
+        <button mat-raised-button color="basic" color="primary" on-click="sendRequest()">
+          {{send}}
+        </button>
+      </p>
+    </form>
+  </div>
+</div>

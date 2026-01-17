@@ -1,0 +1,55 @@
+<img src="../images/Logo-s.jpg" align="Left" />
+<div align="right">
+  <button type="button" (click)="goback()">ログアウト</button>
+</div>
+<br />
+<div align="center"><h1>機能セレクト</h1></div>
+<p>メニューを選択してください</p>
+<div id="warnning"></div>
+
+<div align="center">
+  <br />
+  <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+    <button
+      style="width: 300px; height: 50px"
+      font-size="50"
+      accesskey="submit"
+      mat-raised-button
+      color="accent"
+    >
+      有給休暇所得予実編集
+    </button>
+  </form>
+  <br />
+  <br />
+  <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+    <button type="submit" color="accent">メンバー情報編集</button>
+  </form>
+  <br />
+  <br />
+  <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+    <button
+      style="width: 300px; height: 50px"
+      font-size="50pt"
+      accesskey="submit"
+      mat-raised-button
+      color="accent"
+    >
+      システム設定変更
+    </button>
+  </form>
+  <br />
+  <br />
+  <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+    <button type="submit" color="accent">組織情報編集</button>
+  </form>
+  <br />
+  <br />
+  <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+    <button type="submit" mat-raised-button color="primary">
+      通知メッセージ編集
+    </button>
+  </form>
+  <br />
+</div>
+<br />

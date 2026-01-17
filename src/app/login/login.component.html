@@ -1,0 +1,100 @@
+<div ng-cloak>
+  <div class="container" class="flex-row">
+    <div class="item item1">
+      <div align="center">
+        <img src="../images/Logo-2.jpg" />
+        <nav>
+          <h1>ログイン画面</h1>
+        </nav>
+        <p><li>有給休暇管理システムにログインします</li></p>
+        <mat-form-field appearance="outline">
+          <mat-label>会社コード</mat-label>
+          <input
+            matInput
+            type="text"
+            placeholder="{{ kaisyacd }}"
+            (input)="chkkaisyacd($event)"
+          />
+        </mat-form-field>
+        <br />
+        <mat-form-field appearance="outline">
+          <mat-label>ユーザーＩＤ</mat-label>
+          <input
+            matInput
+            type="text"
+            userID="loginID"
+            required
+            [(ngModel)]="model.loginId"
+            name="loginIDName"
+            #idValid="ngModel"
+          />
+        </mat-form-field>
+        <br />
+        <mat-form-field appearance="outline">
+          <mat-label>パスワード</mat-label>
+          <input
+            matInput
+            type="password"
+            password="password"
+            required
+            [(ngModel)]="model.password"
+            name="password"
+            #passValid="ngModel"
+          />
+        </mat-form-field>
+        <p>
+          <span>{{ warnning }}</span>
+        </p>
+        <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+          <button
+            mat-raised-button
+            color="basic"
+            color="primary"
+            [disabled]="disabledChange"
+          >
+            ログイン
+          </button>
+        </form>
+        <br />
+        <form (ngSubmit)="onSubmit1()" #loginForm="ngForm">
+          <button type="submit1" mat-raised-button color="primary">
+            パスワード変更
+          </button>
+        </form>
+        <br />
+        <label>パスワードを忘れた方は</label>
+        <a href="javascript:void(0)" on-click="openDialog()">こちら</a>
+        &nbsp;&nbsp;
+        <a href="http://www.sys-coms.jp/privacypolicy.php"
+          >個人情報保護方針について</a
+        >
+        <br />
+      </div>
+    </div>
+
+    <div class="item item2">
+      <br />
+      <br />
+      <h1>◎通知情報</h1>
+      <br />
+      <ul>
+        <li>
+          ここにはユーザーに紐づかない通知情報が表示されます。
+          ここにはユーザーに紐づかない通知情報が表示されます。
+          ここにはユーザーに紐づかない通知情報が表示されます。
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <b><span>次回のメンテナンス日は、2025年3月22日(土)です。</span></b>
+          <img src="../images/kouji.jpg" />
+        </li>
+      </ul>
+      <ul>
+        <li>
+          働き方改革によって、2019年4月から年5日の有給休暇取得が義務化されました。
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

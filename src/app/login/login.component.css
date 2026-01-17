@@ -1,0 +1,55 @@
+mat-form-field {
+  width: 14em;
+  margin-right: 6px;
+}
+
+::ng-deep .mat-form-field-flex > .mat-form-field-infix {
+  padding: 0.4em 0px !important;
+}
+::ng-deep .mat-form-field-label-wrapper {
+  top: -1.5em;
+}
+
+::ng-deep
+  .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float
+  .mat-form-field-label {
+  transform: translateY(-1.1em) scale(0.75);
+  width: 133.33333%;
+}
+
+.container {
+  width: 1520px;
+  height: 700px;
+}
+
+.item1 {
+  width: 1520px;
+  height: 700px;
+  font-size: 14pt;
+  font-family: "Meiryo UI", monospace;
+}
+
+::ng-deep .mat-raised-button {
+  height: 40px;
+  width: 200px;
+  font-size: 0.7em;
+}
+
+.item2 {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  width: 1520px;
+  height: 700px;
+  font-size: 14pt;
+  color: black;
+  border-left: 1px solid black;
+  background-color: rgb(208, 253, 119);
+}
+span {
+  color: red;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}

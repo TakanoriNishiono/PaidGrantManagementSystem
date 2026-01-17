@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="item item1">
+    <p>
+      <img src="../images/Logo-2.jpg" />
+      <button style="float: right;" mat-raised-button color="basic" (click)="exitPassChange()" color="primary">
+        {{back}}
+      </button>
+    </p>
+    <h1>{{title}}</h1>
+    <p>
+      ログインパスワードを変更します<br />
+      現在のパスワードと新しいパスワードを入力してください
+    </p>
+    <form>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>{{companyCode}}</mat-label>
+          <input type="text" placeholder={{companyCode}} matInput />
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>{{userID}}</mat-label>
+          <input type="text" placeholder={{userID}} matInput />
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>{{strOldPass}}</mat-label>
+          <input type="password" placeholder={{strOldPass}} (input)="checkOldPassword($event)" matInput />
+          <mat-hint>{{hintOldPass}}</mat-hint>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>{{strNewPass1}}</mat-label>
+          <input type="password" placeholder={{strNewPass1}} (input)="checkNewPassword1($event)" matInput />
+          <mat-hint>{{hintNewPass1}}</mat-hint>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>{{strNewPass2}}</mat-label>
+          <input type="password" placeholder={{strNewPass2}} (input)="checkNewPassword2($event)" matInput />
+          <mat-hint>{{hintNewPass2}}</mat-hint>
+        </mat-form-field>
+      </p>
+    </form>
+    <p>
+      <button mat-raised-button color="basic" color="primary">
+        {{cancel}}
+      </button>
+      <button mat-raised-button color="basic" color="primary" [disabled]="disabledChange" on-click="sendNewPassword()">
+        {{passChange}}
+      </button>
+    </p>
+  </div>
+</div>

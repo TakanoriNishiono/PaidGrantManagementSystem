@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+.cdk-global-overlay-wrapper {
+  display: flex;
+  position: absolute;
+  z-index: 1000;
+  overflow: auto;
+  pointer-events: auto;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Noto Sans JP", "Helvetica Neue", sans-serif;
+}
+::ng-deep .mat-raised-button {
+  height: 40px;
+  width: 150px;
+  font-size: 0.7em;
+}
+/* Overwrite the styles of the mat-dialog-container element globally, but only for those
+that have an id of `modal-component` */
+/* https://stackoverflow.com/a/48689004/9263761 */
+/* mat-dialog-container#modal-component {
+  border: 3px solid #262626;
+  border-radius: 11px;
+  background-color: #1a1a1a;
+} */

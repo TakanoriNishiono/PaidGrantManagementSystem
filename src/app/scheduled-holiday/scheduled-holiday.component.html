@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="item item1">
+        <p>
+            <img src="../images/Logo-2.jpg" />
+            <button style="float: right;" mat-raised-button color="basic" (click)="exitScheculedHoliday()"
+                color="primary">
+                {{logout}}
+            </button><br>
+            <span style="float: right;">有給休暇付与日:{{ nowGrantYear }}</span>
+        </p>
+        <h1>{{title}}</h1>
+        <p>{{noticeText}}</p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-select placeholder="付与年" [(value)]="defaultGrantYear" (valueChange)="selectGrantYear();">
+                    <mat-option *ngFor="let grantYear of grantYears" [value]="grantYear">
+                        {{ grantYear + "年" }}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </p>
+        <p *ngFor="let dateNo of dateList; let i = index; trackBy: trackByItem">
+            <mat-form-field appearance="outline">
+                <input matInput [matDatepicker]="DatePicker" [placeholder]="dateNo" [formControl]="dateForm[i]"
+                    [readonly]="true" (dateChange)="changeScheduledHoliday(i, $event.value)" [min]="startDateForm.value"
+                    [max]="endDateForm.value">
+                <mat-datepicker-toggle matSuffix [for]="DatePicker"
+                    [disabled]="datepickerDisabled[i]"></mat-datepicker-toggle>
+                <mat-datepicker #DatePicker [startAt]="dateForm[i].value"></mat-datepicker>
+                <mat-hint>{{ dateInputHint[i] }}</mat-hint>
+            </mat-form-field>
+            <mat-checkbox [checked]="dateDisabled[i]" (change)="isChangeCheckBox(i, $event.checked)" color="primary"
+                [disabled]="checkDisabled[i]">
+            </mat-checkbox>
+        </p>
+        <p>
+            <button mat-raised-button color="basic" color="primary" (click)="resetScheduledHolidayData()">
+                {{cancel}}
+            </button>
+            <button mat-raised-button color="basic" color="primary" (click)="recordScheduledHoliday()">
+                {{record}}
+            </button>
+        </p>
+    </div>
+</div>

@@ -1,0 +1,4 @@
+gitレポジトリからクローンしたばかりの開発環境には、node_modulesがないため、ビルドが通らない。
+node_modulesを構築するため、以下のコマンドを実行する。
+
+npm install --legacy-peer-deps

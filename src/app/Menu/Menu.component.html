@@ -1,0 +1,67 @@
+<div ng-cloak>
+  <div class="container" class="flex-row">
+    <div class="item item1">
+      <div align="center">
+        <img src="../images/Logo-2.jpg" />
+        <nav>
+          <h1>一般社員用メニュー</h1>
+        </nav>
+        <p>メニューを選択してください</p>
+        <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+          <button mat-raised-button color="primary">有給休暇予実管理</button>
+        </form>
+        <p></p>
+        <button
+          mat-raised-button
+          color="basic"
+          (click)="exitManu()"
+          color="primary"
+        >
+          {{ back }}
+        </button>
+      </div>
+    </div>
+
+    <div class="item item2">
+      <div align="center">
+        <img src="../images/Logo-2.jpg" />
+        <nav>
+          <h1>管理者用メニュー</h1>
+        </nav>
+        <p>メニューを選択してください</p>
+        <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+          <button mat-raised-button color="basic" color="primary">
+            有給休暇予実管理
+          </button>
+        </form>
+        <p></p>
+        <form (ngSubmit)="onSubmit1()" #loginForm="ngForm">
+          <button mat-raised-button color="basic" color="primary">
+            メンバー一覧画面
+          </button>
+        </form>
+        <p>
+          <button mat-raised-button color="basic" color="primary">
+            メンバー詳細画面
+          </button>
+        </p>
+
+        <p>
+          <button mat-raised-button color="basic" color="primary">
+            メンバー情報編集画面
+          </button>
+        </p>
+        <p>
+          <button
+            mat-raised-button
+            color="basic"
+            (click)="exitManu()"
+            color="primary"
+          >
+            {{ back }}
+          </button>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
