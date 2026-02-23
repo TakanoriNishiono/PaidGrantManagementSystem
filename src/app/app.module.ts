@@ -26,6 +26,7 @@ import { MessageComponent } from "./message-component/message-component.componen
 import { ScheduledHolidayComponent } from "./scheduled-holiday/scheduled-holiday.component";
 import { MenuComponent } from "./Menu/Menu.component";
 import { MemberListComponent } from "./member-list/member-list.component";
+import { MemberInfoComponent } from "./member-info/member-info.component";
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { MemberListComponent } from "./member-list/member-list.component";
     ScheduledHolidayComponent,
     MenuComponent,
     MemberListComponent,
+    MemberInfoComponent,
   ],
   imports: [
     BrowserModule,

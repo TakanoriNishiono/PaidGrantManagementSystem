@@ -7,6 +7,7 @@ import { ScheduledHolidayComponent } from "./scheduled-holiday/scheduled-holiday
 import { MessageComponent } from "./message-component/message-component.component";
 import { MenuComponent } from "./Menu/Menu.component";
 import { MemberListComponent } from "./member-list/member-list.component";
+import { MemberInfoComponent } from "./member-info/member-info.component";
 
 const routes: Routes = [
   { path: "PassChangeComponent", component: PassChangeComponent },
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: "MessageComponent", component: MessageComponent },
   { path: "Menu", component: MenuComponent },
   { path: "MemberListComponent", component: MemberListComponent },
+  { path: "MemberInfoComponent", component: MemberInfoComponent },
 ];
 
 @NgModule({

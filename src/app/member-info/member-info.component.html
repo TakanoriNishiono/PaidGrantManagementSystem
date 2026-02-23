@@ -1,0 +1,101 @@
+<div class="container">
+    <div class="item item1">
+        <p>
+            <img src="../images/Logo-2.jpg" />
+            <button style="float: right;" mat-raised-button color="basic" color="primary">
+                戻る
+            </button><br>
+        </p>
+        <h1>社員情報</h1>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>社員ID</mat-label>
+                <input type="memberId" matInput />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>氏名</mat-label>
+                <input type="memberId" matInput />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-select placeholder="上長">
+                    <mat-option>上長1</mat-option>
+                    <mat-option>上長2</mat-option>
+                    <mat-option>上長3</mat-option>
+                    <mat-option>上長4</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-select placeholder="権限区分">
+                    <mat-option>システム管理者</mat-option>
+                    <mat-option>管理者</mat-option>
+                    <mat-option>一般ユーザ</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-select placeholder="雇用形態">
+                    <mat-option>正社員</mat-option>
+                    <mat-option>無期契約社員</mat-option>
+                    <mat-option>有期契約社員</mat-option>
+                    <mat-option>パート</mat-option>
+                    <mat-option>アルバイト</mat-option>
+                    <mat-option>個人事業主</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>ユーザーID</mat-label>
+                <input type="memberId" matInput />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>入社日</mat-label>
+                <input matInput placeholder="入社日" [matDatepicker]="DatePicker1" />
+                <mat-datepicker-toggle matSuffix [for]="DatePicker1"></mat-datepicker-toggle>
+                <mat-datepicker #DatePicker1></mat-datepicker>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>契約開始日</mat-label>
+                <input matInput placeholder="契約開始日" [matDatepicker]="DatePicker2" />
+                <mat-datepicker-toggle matSuffix [for]="DatePicker2"></mat-datepicker-toggle>
+                <mat-datepicker #DatePicker2></mat-datepicker>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>退社日</mat-label>
+                <input matInput placeholder="退社日" [matDatepicker]="DatePicker3" />
+                <mat-datepicker-toggle matSuffix [for]="DatePicker3"></mat-datepicker-toggle>
+                <mat-datepicker #DatePicker3></mat-datepicker>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>有給付与日</mat-label>
+                <input matInput placeholder="有給付与日" [matDatepicker]="DatePicker4" />
+                <mat-datepicker-toggle matSuffix [for]="DatePicker4"></mat-datepicker-toggle>
+                <mat-datepicker #DatePicker4></mat-datepicker>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>非勤務日数</mat-label>
+                <input type="memberId" matInput />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>通知先メールアドレス1</mat-label>
+                <input type="memberId" matInput (input)="checkMailAddress($event, 0)" />
+                <mat-hint>{{ mailAddressHint[0] }}</mat-hint>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>通知先メールアドレス2</mat-label>
+                <input type="memberId" matInput />
+                <mat-hint>{{ mailAddressHint[1] }}</mat-hint>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>通知先メールアドレス3</mat-label>
+                <input type="memberId" matInput />
+                <mat-hint>{{ mailAddressHint[2] }}</mat-hint>
+            </mat-form-field>
+        </p>
+        <p>
+            <button mat-raised-button color="basic" color="primary">
+                キャンセル
+            </button>
+            <button mat-raised-button color="basic" color="primary">
+                登録
+            </button>
+        </p>
+    </div>
+</div>
