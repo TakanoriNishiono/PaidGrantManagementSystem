@@ -1,10 +1,12 @@
 export namespace CommonStrings {
+  export const ok = "OK";
   export const cancel = "キャンセル";
   export const back = "戻る";
   export const login = "ログイン";
   export const logout = "ログアウト";
   export const companyCode = "会社コード";
   export const userID = "ユーザーＩＤ";
+  export const close = "閉じる";
 }
 
 export namespace ScheduledHolidayStrings {
@@ -31,17 +33,22 @@ export namespace PassChangeStrings {
   export const newPass2 = "新しいパスワード(確認)";
   export const oldPassHelp = "現在のパスワードを入力してください。";
   export const newPass1Invalid =
-    "半角英数「0～9、A～Z、a～z」記号を含む８文字以上を指定してください。";
+    "半角の数字、大文字、小文字、記号を含む８文字以上を指定してください。";
   export const newPass1Valid = "有効なパスワードです。";
   export const newPass2Help =
     "確認のため、新しいパスワードをもう一度入力してください。";
   export const newPass2Unmatch = "新しいパスワードが一致していません。";
   export const newPass2Match = "";
   export const passChange = "パスワード変更";
+  export const passChangeSuccess = "パスワードを変更しました。";
+  export const passChangeFailure = "パスワードの変更に失敗しました。";
 }
 
 export namespace NewPassRequestStrings {
+  export const title = "仮パスワード発行";
   export const send = "送信";
+  export const requestCompleteMessage =
+    "仮パスワードが発行されました。\nメールが届かない場合には、再度、仮パスワード発行をしてください。";
 }
 
 export namespace MembeerListStrings {

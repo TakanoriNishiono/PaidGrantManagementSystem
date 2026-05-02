@@ -1,11 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { NewPassRequestComponent } from "../NewPassRequest/newPassRequest.component";
-import {
-  MatDialog,
-  MatDialogConfig,
-  MAT_DIALOG_DATA,
-} from "@angular/material/dialog";
+import { MessageComponent } from "../message-component/message-component.component";
+import { MatDialog, MatDialogConfig } from "@angular/material/dialog";
 import { CommunicationService } from "../Common/Services/communication.service";
 import { FormBuilder, FormControl, Validators } from "@angular/forms";
 import { LoginModel } from "./loginmodule";
@@ -34,7 +31,7 @@ export class LoginComponent implements OnInit {
     private router: Router,
     private dialog: MatDialog,
     private dataService: CommunicationService,
-    private fb: FormBuilder
+    private fb: FormBuilder,
   ) {}
 
   chkkaisyacd(event: Event): void {
@@ -48,6 +45,17 @@ export class LoginComponent implements OnInit {
     dialogConfig.width = "500px";
     dialogConfig.disableClose = true;
     const dialogRef = this.dialog.open(NewPassRequestComponent, dialogConfig);
+
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result?.message) {
+        const messageConfig = new MatDialogConfig();
+        messageConfig.id = "message-dialog";
+        messageConfig.width = "500px";
+        messageConfig.disableClose = true;
+        messageConfig.data = result;
+        this.dialog.open(MessageComponent, messageConfig);
+      }
+    });
   }
 
   kaisya(): void {
@@ -83,7 +91,7 @@ export class LoginComponent implements OnInit {
 
   ScheduledHolidayComponent() {
     const loginObservation = this.dataService.getRequest(
-      "http://localhost:3000/items"
+      "http://localhost:3000/items",
     );
   }
 }

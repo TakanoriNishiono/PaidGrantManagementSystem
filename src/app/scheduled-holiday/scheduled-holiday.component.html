@@ -21,6 +21,7 @@
         </p>
         <p *ngFor="let dateNo of dateList; let i = index; trackBy: trackByItem">
             <mat-form-field appearance="outline">
+                <mat-label>{{ dateNo }}</mat-label>
                 <input matInput [matDatepicker]="DatePicker" [placeholder]="dateNo" [formControl]="dateForm[i]"
                     [readonly]="true" (dateChange)="changeScheduledHoliday(i, $event.value)" [min]="startDateForm.value"
                     [max]="endDateForm.value">

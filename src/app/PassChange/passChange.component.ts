@@ -6,6 +6,7 @@ import { MatDialog, MatDialogConfig } from "@angular/material/dialog";
 import { MessageComponent } from "../message-component/message-component.component";
 import { PassChangeStrings } from "../Common/Data/strings";
 import { CommonStrings } from "../Common/Data/strings";
+import { ValidationService } from "../Common/Services/validation.service";
 
 @Component({
   selector: "app-root",
@@ -35,11 +36,12 @@ export class PassChangeComponent implements OnInit {
   res: any[] = [];
 
   passChangeData!: PassChangeData;
+  validationService: ValidationService = new ValidationService();
 
   constructor(
     private router: Router,
     private dialog: MatDialog,
-    private dataService: CommunicationService
+    private dataService: CommunicationService,
   ) {}
 
   ngOnInit(): void {
@@ -57,7 +59,7 @@ export class PassChangeComponent implements OnInit {
     dialogConfig.disableClose = true;
 
     const loginObservation = this.dataService.getRequest(
-      "http://localhost:3000/successChangePassword"
+      "http://localhost:3000/successChangePassword",
     );
 
     loginObservation.subscribe((response: any[]) => {
@@ -65,8 +67,8 @@ export class PassChangeComponent implements OnInit {
 
       if (this.res[0].AuthenticationResult == "AuthenticationSuccess") {
         dialogConfig.data = {
-          message: "パスワードを変更しました。",
-          button: "OK",
+          message: PassChangeStrings.passChangeSuccess,
+          button: CommonStrings.ok,
         };
 
         const dialogRef = this.dialog.open(MessageComponent, dialogConfig);
@@ -76,8 +78,8 @@ export class PassChangeComponent implements OnInit {
         });
       } else {
         dialogConfig.data = {
-          message: "パスワードの変更に失敗しました。",
-          button: "OK",
+          message: PassChangeStrings.passChangeFailure,
+          button: CommonStrings.ok,
         };
 
         const dialogRef = this.dialog.open(MessageComponent, dialogConfig);
@@ -109,8 +111,9 @@ export class PassChangeComponent implements OnInit {
 
   updateHintNewPass(): void {
     // 半角英小文字大文字数字それぞれ1種類以上含む8文字以上40文字以下ならtrue
-    const passWordRegEx = /^(?=.*?[a-z])(?=.*?[A-Z])(?=.*?\d)[a-zA-Z\d]{8,40}$/;
-    const validPass: boolean = passWordRegEx.test(this.newPass1);
+    const validPass: boolean = this.validationService.isValidPassword(
+      this.newPass1,
+    );
 
     if (validPass) {
       this.hintNewPass1 = PassChangeStrings.newPass1Valid;
@@ -127,14 +130,18 @@ export class PassChangeComponent implements OnInit {
   }
 
   checkPassword(): void {
-    if (this.newPass1 == this.newPass2) {
-      if (this.oldPass != "") {
-        this.disabledChange = false;
+    if (this.validationService.isValidPassword(this.newPass1)) {
+      if (this.newPass1 == this.newPass2) {
+        if (this.oldPass != "") {
+          this.disabledChange = false;
+        } else {
+          this.disabledChange = true;
+        }
       } else {
         this.disabledChange = true;
       }
     } else {
-      this.disabledChange = true;
+      this.disabledChange = false;
     }
   }
 

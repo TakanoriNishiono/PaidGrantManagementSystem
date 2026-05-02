@@ -20,10 +20,10 @@
         </mat-form-field>
       </p>
       <p>
-        <button mat-raised-button color="basic" color="primary" on-click="closeDialog()">
+        <button type="button" mat-raised-button color="basic" color="primary" (click)="closeDialog()">
           {{cancel}}
         </button>
-        <button mat-raised-button color="basic" color="primary" on-click="sendRequest()">
+        <button type="button" mat-raised-button color="basic" color="primary" (click)="sendRequest()">
           {{send}}
         </button>
       </p>

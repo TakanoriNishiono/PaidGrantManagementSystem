@@ -16,7 +16,7 @@ import { CommonStrings } from "../Common/Data/strings";
   styleUrls: ["../../CSS/NewPassRequest.css"],
 })
 export class NewPassRequestComponent {
-  title = "NewPasswordRequest";
+  title = NewPassRequestStrings.title;
   companyCode: string = CommonStrings.companyCode;
   userID: string = CommonStrings.userID;
   cancel: string = CommonStrings.cancel;
@@ -25,7 +25,7 @@ export class NewPassRequestComponent {
 
   constructor(
     public dialogRef: MatDialogRef<NewPassRequestComponent>,
-    private dialog: MatDialog
+    private dialog: MatDialog,
   ) {}
 
   closeDialog(): void {
@@ -33,25 +33,9 @@ export class NewPassRequestComponent {
   }
 
   sendRequest(): void {
-    const dialogConfig = new MatDialogConfig();
-    dialogConfig.id = "modal-component";
-    dialogConfig.width = "500px";
-    dialogConfig.disableClose = true;
-    const dialogRef = this.dialog.open(MessageComponent, dialogConfig);
+    this.dialogRef.close({
+      message: NewPassRequestStrings.requestCompleteMessage,
+      button: CommonStrings.close,
+    });
   }
-  // openDialog(): void {
-  //   Swal.fire({
-  //     html: "仮パスワードが発行されました。<br/>メールが届かない場合には、再度、仮パスワード発行をしてください。",
-  //     showConfirmButton: true,
-  //     customClass: {
-  //       confirmButton: "swalConfirmButton",
-  //     },
-  //   }).then(function () {
-  //     window.location.href = "./login";
-  //   });
-  // }
-
-  // openMessage(): void {
-  //   prompt("test", "");
-  // }
 }
