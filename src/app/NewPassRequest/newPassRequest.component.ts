@@ -1,12 +1,5 @@
-import { Component, Inject, OnInit } from "@angular/core";
-import { Router } from "@angular/router";
-import {
-  MatDialog,
-  MatDialogRef,
-  MatDialogConfig,
-  MAT_DIALOG_DATA,
-} from "@angular/material/dialog";
-import { MessageComponent } from "../message-component/message-component.component";
+import { Component } from "@angular/core";
+import { MatDialog, MatDialogRef } from "@angular/material/dialog";
 import { NewPassRequestStrings } from "../Common/Data/strings";
 import { CommonStrings } from "../Common/Data/strings";
 
@@ -17,6 +10,7 @@ import { CommonStrings } from "../Common/Data/strings";
 })
 export class NewPassRequestComponent {
   title = NewPassRequestStrings.title;
+  message = NewPassRequestStrings.dialogMessage;
   companyCode: string = CommonStrings.companyCode;
   userID: string = CommonStrings.userID;
   cancel: string = CommonStrings.cancel;

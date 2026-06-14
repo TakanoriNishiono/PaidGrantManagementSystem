@@ -7,6 +7,8 @@ export namespace CommonStrings {
   export const companyCode = "会社コード";
   export const userID = "ユーザーＩＤ";
   export const close = "閉じる";
+  export const registration = "登録";
+  export const invalidMailAddress = "無効なメールアドレスです";
 }
 
 export namespace ScheduledHolidayStrings {
@@ -47,11 +49,14 @@ export namespace PassChangeStrings {
 export namespace NewPassRequestStrings {
   export const title = "仮パスワード発行";
   export const send = "送信";
+  export const dialogMessage =
+    "仮パスワードを発行します。\nユーザーＩＤを入力してから、送信ボタンを押すと、仮パスワードが発行されます。";
   export const requestCompleteMessage =
     "仮パスワードが発行されました。\nメールが届かない場合には、再度、仮パスワード発行をしてください。";
 }
 
-export namespace MembeerListStrings {
+export namespace MemberListStrings {
+  export const title = "メンバー一覧";
   export const userId = "No.";
   export const grantYear = "付与年";
   export const division = "所属部";
@@ -60,4 +65,20 @@ export namespace MembeerListStrings {
   export const name = "氏名";
   export const digestedDays = "有休消化";
   export const actions = "ボタン";
+}
+
+export namespace MemberInfoStrings {
+  export const title = "メンバー情報";
+  export const memberName = "氏名";
+  export const memberId = "社員ID";
+  export const boss = "上司";
+  export const userPrivileges = "ユーザー権限";
+  export const employmentStatus = "雇用形態";
+  export const grantDate = "有給付与日";
+  export const mailAddress1 = "通知先メールアドレス1";
+  export const mailAddress2 = "通知先メールアドレス2";
+  export const mailAddress3 = "通知先メールアドレス3";
+  export const joiningDate = "入社日";
+  export const retirementDate = "退社日";
+  export const contractStartDate = "契約開始日";
 }
